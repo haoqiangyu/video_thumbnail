@@ -1,5 +1,9 @@
 # video_thumbnail
 
+## fork from https://github.com/justsoft/video_thumbnail (0.4.6,13108ecaa3e234faf21b7bf59621164abf61e6cb)
+- 修复部分Android机型无法获取缩略图的问题
+- Android端不要使用buildThumbnailFile，有问题
+
 This plugin generates thumbnail from video file or URL.  It returns image in memory or writes into a file.  It offers rich options to control the image format, resolution and quality.  Supports iOS and Android.
 
   [![pub ver](https://img.shields.io/badge/pub-v0.4.6-blue)](https://pub.dev/packages/video_thumbnail)
