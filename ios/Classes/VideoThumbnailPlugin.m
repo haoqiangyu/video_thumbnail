@@ -96,9 +96,11 @@
     
     imgGenerator.appliesPreferredTrackTransform = TRUE;
     imgGenerator.maximumSize = CGSizeMake((CGFloat)maxw, (CGFloat)maxh);
-    imgGenerator.requestedTimeToleranceBefore = kCMTimeZero;
-    imgGenerator.requestedTimeToleranceAfter = kCMTimeZero;
-    
+    //部分视频设置以下两个属性后无法获取截图
+    //考虑使用generateCGImagesAsynchronouslyForTimes，但是copyCGImageAtTime速度更快
+    //imgGenerator.requestedTimeToleranceBefore = kCMTimeZero;
+    //imgGenerator.requestedTimeToleranceAfter = kCMTimeZero;
+
     NSError *error = nil;
     CGImageRef cgImage = [imgGenerator copyCGImageAtTime:CMTimeMake(timeMs, 1000) actualTime:nil error:&error];
     
